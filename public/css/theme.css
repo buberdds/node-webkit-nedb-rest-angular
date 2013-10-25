@@ -1,0 +1,78 @@
+html {
+  background: linear-gradient(to bottom, #FFF 0%,#F9F9F9 100%);
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.bs-callout-info {
+  background: linear-gradient(to right, #F9F9F9 0%,#FFF 100%);
+  border-color: #D0E3F0;
+}
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+}
+
+.loading {
+  cursor: wait;
+  background-color: rgba(0,0,0,0);
+  opacity: .8;
+  border-radius: 50px;
+  margin: 5% auto;
+  animation: loading .5s infinite linear;
+  -webkit-animation: loading .5s infinite linear;
+  box-shadow: 0px 4px 6px rgba(209, 209, 209, 0.5);
+  border: 10px solid #eee;
+  border-top: 10px solid rgba(0,0,0,0);
+  border-left: 10px solid rgba(0,0,0,0);
+  width: 50px;
+  height: 50px;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  };
+  }
+
+
+.reveal-animation.ng-enter {
+  transition: .75s linear all;
+  opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.reveal-animation.ng-enter {
+  transition: .75s linear all;
+  opacity: 0;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+      background: linear-gradient(to bottom, #FFF 0%,#F9F9F9 100%);
+      min-height: 100%;
+    }
+  </style>
+  <script>
+    function bodyOnLoad(){
+      require('./server.js');
+      window.location.assign('http://localhost:3000/');
+    }
+  </script>
+</head>
+<body onload="bodyOnLoad()">
+<div class="loading"></div>
+</body>
+</html>
