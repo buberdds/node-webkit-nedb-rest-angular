@@ -6,10 +6,12 @@
   "window": {
     "title": "Demo app",
     "toolbar": false,
+    "frame": false,
     "position": "center",
-    "width": 1000,
-    "height": 700
+    "fullscreen": true,
+    "resizable": true
   },
+  "node-remote": "<local>",
   "dependencies": {
     "express": "3.x",
     "nedb": "~0.8.0"

@@ -13,12 +13,24 @@
 </head>
 <body>
 
-<div class="container" ng-controller="Listing">
-  <div class="header">
+<div class="container">
+  <div class="header" ng-controller="WindowToolbar">
+    <div class="btn-group pull-right">
+      <button ng-click="windowMinimize()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-minus"></span> Minimize
+      </button>
+      <button ng-click="windowToggleFullscreen()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-fullscreen"></span> Fullscreen
+      </button>
+      <button ng-click="windowClose()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-remove"></span> Close
+      </button>
+    </div>
     <h3 class="text-muted">Project name</h3>
   </div>
 
-  <div class="bs-callout bs-callout-info">
+  <div ng-controller="Listing">
+    <div class="bs-callout bs-callout-info">
     <form class="form-inline" role="form" ng-submit="addItem()">
       <div class="form-group">
         <label class="sr-only" for="name">Name</label>
@@ -31,8 +43,7 @@
       <button type="submit" class="btn btn-primary">Add</button>
     </form>
   </div>
-
-  <table class="table">
+    <table class="table">
     <thead>
     <th class="col-md-4">
       Name
@@ -64,6 +75,7 @@
     </tr>
     </tbody>
   </table>
+  </div>
 </div>
 </body>
 </html>

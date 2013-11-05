@@ -10,8 +10,24 @@ angular.module('demo', ['ngResource', 'ngAnimate'])
       }
     );
   })
-  .controller('Listing', ['$scope', 'ItemsDB', function($scope, ItemsDB) {
+  .factory('Window', function() {
+    var gui = require('nw.gui');
+    return gui.Window.get()
+  })
+  .controller('WindowToolbar', ['$scope', 'Window', function($scope, Window) {
+    $scope.windowMinimize = function() {
+      Window.minimize();
+    };
 
+    $scope.windowToggleFullscreen = function() {
+      Window.toggleFullscreen();
+    };
+
+    $scope.windowClose = function() {
+      Window.close();
+    };
+  }])
+  .controller('Listing', ['$scope', 'ItemsDB', function($scope, ItemsDB) {
     ItemsDB.get(function(data) {
       $scope.items = data;
     });
@@ -36,6 +52,5 @@ angular.module('demo', ['ngResource', 'ngAnimate'])
         $scope.items.splice($scope.items.indexOf(item), 1);
       })
     };
-
   }]);
 
